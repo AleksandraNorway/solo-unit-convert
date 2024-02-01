@@ -1,5 +1,5 @@
 {
-  "name": "project",
+  "name": "Unit Converter",
   "dependencies": {},
   "devDependencies": {
     "vite": "latest"
