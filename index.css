@@ -90,6 +90,11 @@ body {
  border: none;
  
 }
+.convert-button:hover {
+  color:#6943FF;
+  font-weight: 600;
+  background-color: azure;
+}
 
 .conversion-content {
    min-width: 320px;
