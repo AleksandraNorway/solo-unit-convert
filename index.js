@@ -1,41 +1,32 @@
-let homeScore = document.getElementById("home-score")
-let guestScore = document.getElementById("guest-score")
-let score1 = 0;
-let score2 = 0;
+/*
+1 meter = 3.281 feet
+1 liter = 0.264 gallon
+1 kilogram = 2.204 pound
+*/
 
+let btnConvert = document.getElementById("btn")
+let inputAmmount = document.getElementById("input-numer")
 
-function addScoreHome(points) {
-   score1 += points;
-   homeScore.innerText = score1;
-   updateScoreStyles()
-   
-}
-function addScoreGuest(points) {
-   score2 += points;
-   guestScore.innerText = score2;
-   updateScoreStyles()
-}
+let length = document.getElementById("length")
+let volume = document.getElementById("volume")
+let mass = document.getElementById("mass")
 
-function updateScoreStyles() {
-if (score1 > score2) {
-    homeScore.classList.add('highliter')
-    guestScore.classList.remove('highliter')
-} else if (score1 < score2)  {
-     guestScore.classList.add('highliter')
-     homeScore.classList.remove('highliter')
-} else {
-    // Set the border color for the else condition
-     guestScore.classList.remove('highliter')
-     homeScore.classList.remove('highliter') // Replace 'anotherColor' with the color of your choice
-}
-}
-// Initialize styles on page load
-updateScoreStyles();
- 
- function newGame() {
-     score1 = 0;
-     score2 = 0;
-     homeScore.innerText = "0";
-     guestScore.innerText = "0";
-     
- }
+btnConvert.addEventListener("click", function() {
+    /* 1 meter = 3.281 feet */
+    let feet = inputAmmount.value * 3.281
+    let meter = inputAmmount.value / 3.281
+    
+    /* 1 liter = 0.264 gallon */
+    let gallon = inputAmmount.value * 0.264
+    let liter = inputAmmount.value / 0.264
+    
+    /* 1 kilogram = 2.204 pound */
+    let pound = inputAmmount.value * 2.204
+    let kilogram = inputAmmount.value / 2.204
+    
+    length.innerHTML = `${inputAmmount.value} meters = ${feet.toFixed(3)} feet | ${inputAmmount.value} feet = ${meter.toFixed(3)} meters`
+    
+    volume.innerHTML = `${inputAmmount.value} liters = ${gallon.toFixed(3)} gallons | ${inputAmmount.value} gallons = ${meter.toFixed(3)} liters`
+    
+    mass.innerHTML = `${inputAmmount.value} kilos = ${pound.toFixed(3)} pounds | ${inputAmmount.value}  pounds = ${kilogram.toFixed(3)} kilos`
+})

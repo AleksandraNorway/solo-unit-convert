@@ -1,47 +1,80 @@
+<!DOCTYPE html>
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="index.css">
-        <link href="https://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
-       
-                      
-    </head>
-    <body>
-        
-        <div class="container">
-            <div class="wraper">
-            <div class="container-home">
-                <div>
-                <h3>HOME</h3>
-                <p class="score" id="home-score">0</p>
-                </div>
-               <div class="container-points">
-                <p class="points" onclick="addScoreHome(1)">+1</p>
-                <p class="points" onclick="addScoreHome(2)">+2</p>
-                <p class="points" onclick="addScoreHome(3)">+3</p>
-                </div>
-            </div>
+    
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External stylesheets: Google Font 'Inter' and a local CSS file -->
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body>
+     
+     <div class="main-section"> 
+        <!-- Title Section -->
+        <div class="title-section"> 
             
-             <div class="container-guest">
-                 
-                <div>
-                <h3>GUEST</h3>
-            <p class="score" id="guest-score">0</p>
+                <span class="title">
+                Metric/Imperial Unit Conversion
+                </span>
+                   <!-- Additional Elements for Future Use -->
+                   
+           <input id="input-numer" type="number" class="large-number-display" placeholder="0" min="0" max="100000">
+
+               <!-- Convert Button -->
+        <button class="convert-button" id="btn">
+                Convert
+        </button>
+  
+    </div>
+
+    <!-- Main Conversion Section -->    
+         
+      <div class="conversion-content">  
+          
+          <!-- Length Conversion Section -->
+                <div class="conversion-details">
+                    
+                    <span class="conversion-label">
+                        Length (Meter/Feet)
+                     </span>
+                    <span id="length" class="conversion-info">
+                        0 meters = 0 feet | 0 feet = 0 meters 
+                     </span>
                 </div>
                 
-               <div class="container-points">
-                <p class="points" onclick="addScoreGuest(1)">+1</p>
-                <p class="points" onclick="addScoreGuest(2)">+2</p>
-                <p class="points" onclick="addScoreGuest(3)">+3</p>
+        <!-- Volume Conversion Section -->
+         <div class="conversion-details">
+                    
+                    <span class="conversion-label">
+                        Volume (Liters/Gallons)
+                     </span>
+                    <span id="volume" class="conversion-info">
+                     0 liters = 0 gallons | 0 gallons = 0 liters
+                     </span>
                 </div>
+                
+         <!-- Mass Conversion Section -->  
+                
                  
-            </div> 
+         <div class="conversion-details">
+                    
+                    <span class="conversion-label">
+                       Mass (Kilograms/Pounds)
+                     </span>
+                    <span id="mass" class="conversion-info">
+                      0 kilos = 0 pounds | 0 pounds = 0 kilos
+                     </span>
+                </div>
+                
             </div>
-             
-           <button onclick="newGame()">NEW GAME</button> 
-        </div>
-        
-         
-       
-        <script src="index.js"></script>
-    </body>
+     </div>
+    <!-- Link to external JavaScript file -->
+    <script src="index.js"></script>
+</body>
 </html>
+
